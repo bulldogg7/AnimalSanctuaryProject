@@ -25,3 +25,11 @@
 	- Refined User Experience with verbiage and formatting
 	- Changed errors made in applying fields and methods to the Animal class when it should have 
 	  been in the subclasses of Dog, Cat, Chicken, etc.
+	 
+## Difficulties Encountered
+	- addAnimal functionality: could not figure out how to add an animal and 
+	  fill an array enclosure in time for project deadline
+	- makeRounds: ran out of time to have the app run option 3 to have the attendant
+	  check each enclosure, wait for an animal noise, feed the animal, and move on to
+	  the next enclosure to check for another hungry animal
+

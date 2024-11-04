@@ -9,21 +9,20 @@ public class Sanctuary {
 	// Methods
 	// Set Attendant
 	public void setAttendant(Attendant attendant) {
-			this.attendant = attendant;
+		this.attendant = attendant;
 	}
 
 	// List Animals
 	public void listAnimals() {
-		System.out.println("The Animal Sanctuary Currently Includes: ");
-		for(int i = 0; i < animals.length; i++) {
-			if(animals[i] != null) {
+		for (int i = 0; i < animals.length; i++) {
+			if (animals[i] != null) {
 				System.out.println(animals[i].getName());
 			} else {
-				System.out.println("There Are No Animals in the Sanctuary!");
-				}
+				System.out.println("There Are No Animals in this Enclosure!");
+			}
 		}
-		}
-			
+	}
+
 	// Add An Animal
 	public void addAnimal(Animal animal) {
 		for (int i = 0; i < animals.length; i++) {
@@ -31,13 +30,13 @@ public class Sanctuary {
 				animals[i] = animal;
 				System.out.println("Your Animal Has Been Added!");
 			} else {
-				System.out.println("Sorry! The Sanctuary is Full!");
-}
+				System.out.println("Animal Can't Be Added! The Sanctuary is Full!");
+			}
 		}
 	}
+
 	// Start Attendant Rounds
 	public void startAttendantRounds() {
 		Attendant.makeRounds(animals);
-
 	}
 }

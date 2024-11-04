@@ -9,6 +9,7 @@ public class Chicken extends Animal {
 	public void makeNoise() {
 		System.out.println(noise);
 	}
+
 	@Override
 	public void eatFood(int amount) {
 		makeNoise();

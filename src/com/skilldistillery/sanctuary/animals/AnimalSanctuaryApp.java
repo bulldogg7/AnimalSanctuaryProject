@@ -8,8 +8,6 @@ public class AnimalSanctuaryApp {
 
 		// Fields
 		Sanctuary sanctuary = new Sanctuary();
-
-		
 		
 		do {
 			launchApp();
@@ -18,7 +16,7 @@ public class AnimalSanctuaryApp {
 			if (selection1 == 1) {
 				System.out.println();
 				System.out.println("The Animal Sanctuary Currently Includes: ");
-				// listAnimals
+				sanctuary.listAnimals();
 				System.out.println();
 				} if (selection1 == 2) {
 				System.out.println();
@@ -28,14 +26,14 @@ public class AnimalSanctuaryApp {
 				System.out.println("|| 3) Chicken ||");
 				System.out.println("****************");
 				System.out.println("Which Animal Would You Like to Add?");
-				int selection2 = input.nextInt();
+				int animalType = input.nextInt();
 				System.out.println();
 				System.out.println("Give the Animal a Name: ");
 				String animalName = input.next();
 				System.out.println();
 				System.out.println(animalName + " Has Entered the Sanctuary!");
 				System.out.println();
-				// Add animal to Sanctuary
+				sanctuary.addAnimal(null);
 			}
 			if (selection1 == 3) {
 				System.out.println();
