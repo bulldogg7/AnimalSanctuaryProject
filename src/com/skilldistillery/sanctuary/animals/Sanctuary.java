@@ -1,17 +1,11 @@
-package com.skilldistillery.sanctuary.app;
+package com.skilldistillery.sanctuary.animals;
 
 public class Sanctuary {
 
 	
 	// Fields
-	int[] animalEnclosures = new int[5]; {;
-	animalEnclosures[0] = 1; 
-	animalEnclosures[1] = 2;
-	animalEnclosures[2] = 3;
-	animalEnclosures[3] = 4;
-	animalEnclosures[4] = 5;
-	}
-	String attendant = "";
+	Animal animalEnclosure[] = new Animal[5]; 	
+	Attendant animalAttendant;
 
 	
 	// Methods

@@ -1,6 +1,6 @@
 package com.skilldistillery.sanctuary.animals;
 
-public class Animal extends Sanctuary{
+public class Animal {
 
 	// Fields
 	private String name;
@@ -17,11 +17,9 @@ public class Animal extends Sanctuary{
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public void makeNoise(String noise) { 
 		System.out.println(noise);
 	}
-
 	public void eatFood(int amountOfFood) {
 		System.out.println("I'm eating " + amountOfFood + "foods!");
 	}

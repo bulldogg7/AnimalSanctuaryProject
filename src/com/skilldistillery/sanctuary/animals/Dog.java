@@ -12,6 +12,6 @@ public class Dog extends Animal {
 	@Override
 	public void eatFood(int amount) {
 		makeNoise();
-		System.out.println("I love eating " + amountOfFood + "dog treats!");
+		System.out.println("I love eating " + amountOfFood + "dog biscuits!");
 	}
 }
