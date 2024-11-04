@@ -1,6 +1,6 @@
 package com.skilldistillery.sanctuary.animals;
 
-public class Animal {
+public class Animal extends Sanctuary{
 
 	// Fields
 	private String name;
