@@ -5,19 +5,22 @@ import java.util.Scanner;
 public class AnimalSanctuaryApp {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		String repeat = "";
-		int selection = 0;
+
+		// Fields
+		Sanctuary sanctuary = new Sanctuary();
+
+		
+		
 		do {
-			getMenu();
+			launchApp();
 			int selection1 = input.nextInt();
 
 			if (selection1 == 1) {
 				System.out.println();
 				System.out.println("The Animal Sanctuary Currently Includes: ");
-//					System.out.println(listAnimals);
-				
-			}
-			if (selection1 == 2) {
+				// listAnimals
+				System.out.println();
+				} if (selection1 == 2) {
 				System.out.println();
 				System.out.println("****************");
 				System.out.println("|| 1) Dog     ||");
@@ -32,10 +35,12 @@ public class AnimalSanctuaryApp {
 				System.out.println();
 				System.out.println(animalName + " Has Entered the Sanctuary!");
 				System.out.println();
+				// Add animal to Sanctuary
 			}
 			if (selection1 == 3) {
 				System.out.println();
 				System.out.println("It's Feeding Time!");
+				// makeRounds
 				break;
 			}
 			if (selection1 == 4) {
@@ -45,10 +50,11 @@ public class AnimalSanctuaryApp {
 			} if (selection1 > 4) {
 				System.out.println();
 				System.out.println("Selection Invalid.");
+				System.out.println();
 			}
 		} while (true);
 	}
-	public static void getMenu() {
+	private static void launchApp() {
 		System.out.println("*********************************************");
 		System.out.println("|| 1) List All Animals in the Sanctuary    ||");
 		System.out.println("|| 2) Add a New Animal to the Sanctuary    ||");

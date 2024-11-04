@@ -14,7 +14,7 @@ public class Attendant {
 			return;
 		}
 		else {
-			System.out.println("There is no animal here to feed.");
+			System.out.println("There is No Animal Here to Feed.");
 		}
 	}
 	}

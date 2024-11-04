@@ -2,94 +2,42 @@ package com.skilldistillery.sanctuary.animals;
 
 public class Sanctuary {
 
-	
 	// Fields
-	Animal animalEnclosure[] = new Animal[5]; 	
-	Attendant animalAttendant;
+	private Animal animals[] = new Animal[5];
+	private Attendant attendant;
 
-	
 	// Methods
-	public static void setAttendant() {
-		
+	// Set Attendant
+	public void setAttendant(Attendant attendant) {
+			this.attendant = attendant;
 	}
-	
-	public static void listAnimals() {
-		
-	}
-	
-	public static void addAnimal() {
-		
-		System.out.println("Sorry! The Sanctuary is Full!");
-	}
-	
-	public static void startAttendantRounds() {
-		
-	}
-	}
-	
 
+	// List Animals
+	public void listAnimals() {
+		System.out.println("The Animal Sanctuary Currently Includes: ");
+		for(int i = 0; i < animals.length; i++) {
+			if(animals[i] != null) {
+				System.out.println(animals[i].getName());
+			} else {
+				System.out.println("There Are No Animals in the Sanctuary!");
+				}
+		}
+		}
+			
+	// Add An Animal
+	public void addAnimal(Animal animal) {
+		for (int i = 0; i < animals.length; i++) {
+			if (animals[i] == null) {
+				animals[i] = animal;
+				System.out.println("Your Animal Has Been Added!");
+			} else {
+				System.out.println("Sorry! The Sanctuary is Full!");
+}
+		}
+	}
+	// Start Attendant Rounds
+	public void startAttendantRounds() {
+		Attendant.makeRounds(animals);
 
-
-//	private Animal[] animals;
-//	private int numberOfAnimals = 0;
-//
-//	final private static int MAX_ANIMALS = 10;
-//
-//	public Sanctuary() {
-//	    animals = new Animal[MAX_ANIMALS];
-//	  }
-//
-//	public void addAnimal(Car c) {
-//		animals[numberOfAnimals] = c;
-//		numberOfAnimals++; 
-//	}
-//
-//	public Animal[] getAnimals() {
-//		Animal[] animalCopy;
-//		animalCopy = new Animal[numberOfAnimals];
-//		for (int i = 0; i < numberOfAnimals; i++) {
-//			animalCopy[i] = animals[i];
-//		}
-//
-//		return animalCopy;
-//	}
-//}
-//
-//package com.skilldistillery.sanctuary.entities;
-//public class Sanctuary {
-//	private Animal[] animals = new Animal[5];
-//	private Attendant attendant;
-//	public void setAttendant(Attendant attendant) {
-//		this.attendant = attendant;
-//}
-//	
-//	public void startAttendantRounds() {
-//		attendant.makeRounds(animals);
-//	}
-//	
-//	public void listAnimals() {
-//		
-//		System.out.println(“Heres all the animals in your sanctuary!“);
-//		for (int i = 0; i < animals.length; i++) {
-//			if (animals[i] != null) {
-//				System.out.println(animals[i].getName());
-//			}
-//			else {
-//			System.out.println(“This enclosure is empty..“);
-//		}
-//		}
-//		
-//	}
-//	
-//	public void addAnimal(Animal animal) {
-//		for (int i = 0; i <= animals.length; i++) {
-//			if (animals[i] == null) {
-//				animals[i] = animal;
-//				System.out.println(“Thank you for adding the animal to the Sanctuary!“);
-//				return;
-//			}
-//			
-//		}
-//		
-//	}
-//}
+	}
+}
