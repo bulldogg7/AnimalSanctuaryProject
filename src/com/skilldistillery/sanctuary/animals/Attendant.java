@@ -3,7 +3,7 @@ package com.skilldistillery.sanctuary.animals;
 public class Attendant {
 
 	// Methods
-	public static void makeRounds(Animal[] animals) {
+	public static void makeRounds(Animal animals[]) {
 		System.out.println("Feeding Time!");
 	{
 	for(int i = 0; i < animals.length; i++) {
