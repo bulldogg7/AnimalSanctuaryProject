@@ -3,23 +3,20 @@ package com.skilldistillery.sanctuary.animals;
 public class Animal {
 
 	// Fields
-	private String name;
-
-	// Constructors
-	public void animalName(String name) {
-		this.name = name;
-	}
+	private String animalName;
 
 	// Getters & Setters
 	public String getName() {
-		return name;
+		return animalName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String animalName) {
+		this.animalName = animalName;
 	}
-	public void makeNoise(String noise) { 
-		System.out.println(noise);
+	
+	// Methods
+	public void makeNoise() { 
 	}
+	
 	public void eatFood(int amountOfFood) {
 		System.out.println("I'm eating " + amountOfFood + "foods!");
 	}

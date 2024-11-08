@@ -11,8 +11,8 @@ public class Chicken extends Animal {
 	}
 
 	@Override
-	public void eatFood(int amount) {
+	public void eatFood(int amountOfFood) {
 		makeNoise();
-		System.out.println("I love eating " + amountOfFood + "meal worms!");
+		System.out.println("I love eating " + amountOfFood + " meal worms!");
 	}
 }

@@ -3,20 +3,21 @@ package com.skilldistillery.sanctuary.animals;
 public class Sanctuary {
 
 	// Fields
-	private Animal animals[] = new Animal[5];
-	private Attendant attendant;
+	private Animal animalEnclosures[] = new Animal[5];
+	public Sanctuary(int numberOfEnclosures) {
+		animalEnclosures = new Animal[numberOfEnclosures];
+	}
 
 	// Methods
 	// Set Attendant
 	public void setAttendant(Attendant attendant) {
-		this.attendant = attendant;
 	}
 
 	// List Animals
 	public void listAnimals() {
-		for (int i = 0; i < animals.length; i++) {
-			if (animals[i] != null) {
-				System.out.println(animals[i].getName());
+		for (Animal animal : animalEnclosures) {
+			if (animal != null) {
+				System.out.println("This Enclosure has: " + animal.getName() + " the " + animal.getClass().getSimpleName());
 			} else {
 				System.out.println("There Are No Animals in this Enclosure!");
 			}
@@ -24,19 +25,39 @@ public class Sanctuary {
 	}
 
 	// Add An Animal
-	public void addAnimal(Animal animal) {
-		for (int i = 0; i < animals.length; i++) {
-			if (animals[i] == null) {
-				animals[i] = animal;
-				System.out.println("Your Animal Has Been Added!");
-			} else {
-				System.out.println("Animal Can't Be Added! The Sanctuary is Full!");
+	public void addAnimal(Animal newAnimal) {
+		for (int i = 0; i < animalEnclosures.length; i++) {
+			if (animalEnclosures[i] == null) {
+				animalEnclosures[i] = newAnimal;
+				return;
 			}
 		}
+		System.out.println("Animal Can't Be Added! The Sanctuary is Full!");
+		animalEnclosures = addToSanctuary();
+		addAnimal(newAnimal);
+	}
+	
+	public boolean isFull() {
+		for (int i = 0; i < animalEnclosures.length; i++) {
+			if (animalEnclosures[i] == null) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	private Animal[] addToSanctuary() {
+		Animal[] addToSanctuary = new Animal[animalEnclosures.length * 2];
+		System.out.println("New Enclosure Added!");
+
+		for (int i = 0; i < animalEnclosures.length; i++) {
+			addToSanctuary[i] = animalEnclosures[i];
+		}
+		return addToSanctuary;
 	}
 
 	// Start Attendant Rounds
 	public void startAttendantRounds() {
-		Attendant.makeRounds(animals);
+		Attendant.makeRounds(animalEnclosures);
 	}
 }

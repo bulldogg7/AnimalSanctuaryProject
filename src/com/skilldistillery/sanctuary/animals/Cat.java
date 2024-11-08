@@ -11,8 +11,8 @@ public class Cat extends Animal {
 	}
 
 	@Override
-	public void eatFood(int amount) {
+	public void eatFood(int amountOfFood) {
 		makeNoise();
-		System.out.println("I love eating " + amountOfFood + "fish sticks!");
+		System.out.println("I love eating " + amountOfFood + " fish sticks!");
 	}
 }

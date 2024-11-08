@@ -3,19 +3,16 @@ package com.skilldistillery.sanctuary.animals;
 public class Attendant {
 
 	// Methods
-	public static void makeRounds(Animal animals[]) {
-		System.out.println("Feeding Time!");
-		{
-			for (int i = 0; i < animals.length; i++) {
-				if (animals[i] != null) {
-					int amountOfFood = (int) (Math.random() * 10) + 0;
-					System.out.println("I need to feed " + animals.length + " " + amountOfFood + "foods.");
-					animals[i].eatFood(amountOfFood);
-					return;
-				} else {
-					System.out.println("There is No Animal Here to Feed.");
-				}
+	public static void makeRounds(Animal[] sanctuary) {
+		for (Animal animal : sanctuary) {
+			if (animal != null) {
+				System.out.println("Feeding " + animal.getName());
+				animal.eatFood((int) ((Math.random() + 1) * 10));
+			} else {
+				System.out.println("There is No Animal Here to Feed.");
+				System.out.println();
 			}
 		}
+		System.out.println("All Animals are Fed! My Rounds are Done!");
 	}
 }
